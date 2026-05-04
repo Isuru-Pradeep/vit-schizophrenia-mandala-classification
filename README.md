@@ -39,11 +39,69 @@ final_model/
 
 ## Installation
 
-**Requirements:** Python 3.8+, NVIDIA GPU with CUDA recommended.
+**Requirements:** Python 3.10+, NVIDIA GPU with CUDA recommended.
+
+### Option 1 — Miniconda (Recommended)
+
+**Step 1 — Install Miniconda**
+
+Download and install Miniconda for your OS from:
+https://docs.conda.io/en/latest/miniconda.html
+
+After installation, open **Anaconda Prompt** (Windows) or a terminal (macOS/Linux) and verify:
+```bash
+conda --version
+```
+
+**Step 2 — Clone the Repository**
 
 ```bash
-git clone <repository-url>
-cd final_model
+git clone https://github.com/Isuru-Pradeep/vit-schizophrenia-mandala-classification.git
+cd vit-schizophrenia-mandala-classification
+```
+
+**Step 3 — Create the Conda Environment**
+
+Using `environment.yml` (single command):
+```bash
+conda env create -f environment.yml
+```
+
+Or manually if the above fails:
+```bash
+conda create -n vit-mandala python=3.10 -y
+conda activate vit-mandala
+
+# With GPU (check your CUDA version with: nvidia-smi)
+conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia -y
+
+# CPU only
+conda install pytorch torchvision cpuonly -c pytorch -y
+
+pip install -r requirements.txt
+```
+
+**Step 4 — Activate the Environment**
+
+```bash
+conda activate vit-mandala
+```
+
+> Run `conda activate vit-mandala` every time you open a new terminal before using this project.
+
+**Step 5 — Verify Installation**
+
+```bash
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available())"
+```
+
+---
+
+### Option 2 — pip + venv
+
+```bash
+git clone https://github.com/Isuru-Pradeep/vit-schizophrenia-mandala-classification.git
+cd vit-schizophrenia-mandala-classification
 
 python -m venv .venv
 
@@ -54,6 +112,11 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
+```
+
+Verify:
+```bash
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available())"
 ```
 
 ---

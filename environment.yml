@@ -1,0 +1,21 @@
+name: vit-mandala
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - pytorch-cuda=11.8
+  - pip
+  - pip:
+      - timm>=0.9.0
+      - scikit-learn>=1.2.0
+      - pandas>=2.0.0
+      - numpy>=1.24.0
+      - matplotlib>=3.7.0
+      - Pillow>=9.5.0
+      - tqdm>=4.65.0
+      - opencv-python>=4.7.0
