@@ -1,0 +1,86 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code local settings
+settings.local.json
+.claude/
+
+# Training and model outputs (generated, not source code)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.bin
+
+# Evaluation and results
+evaluation/**/results/
+evaluation/**/metrics.json
+*.pkl
+*.joblib
+
+# XAI and visualization outputs
+explainability_outputs/
+explainability/**/outputs/
+gradcam_outputs/
+gradcam/**/outputs/
+saliency_maps/
+attention_maps/
+
+# Dataset files (keep track but ignore large downloads)
+dataset/**/raw/
+dataset/**/processed/
+dataset/**/*.csv
+dataset/**/*.parquet
+*.h5
+*.hdf5
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Config overrides (user-specific settings)
+config/local_config.py
+config/*.local.json
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Node modules (if any frontend)
+node_modules/
+
+# Environment variables
+.env
+.env.local
